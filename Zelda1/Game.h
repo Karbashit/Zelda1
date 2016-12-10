@@ -2,6 +2,11 @@
 #include "Window.h"
 #include "Renderer.h"
 #include "InputManager.h"
+#include "Config.h"
+
+	extern bool _gameIsRunning;
+
+
 
 class InputManager;
 
@@ -14,13 +19,11 @@ public:
 	void Run();
 	void Update();
 
-	bool _gameIsRunning;
-
 	InputManager* getInput;
-
+	InputManager* _inputManager;
 private:
 	Window _window;
 	Renderer _renderer;
-	InputManager* _inputManager;
+
 };
 

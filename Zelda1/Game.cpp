@@ -1,9 +1,10 @@
 #include "Game.h"
 
-Game::Game() :	_gameIsRunning(true), 
-				_window{"Zelda 1", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600}, 
+bool _gameIsRunning = true;
+
+Game::Game() :	_window{"Zelda 1", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600}, 
 				_renderer{ _window },
-				_inputManager{ new InputManager }
+				_inputManager{new InputManager}
 {
 }
 

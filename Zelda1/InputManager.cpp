@@ -1,21 +1,22 @@
 #include "InputManager.h"
 
-InputManager::InputManager() : getGame{new Game}
+InputManager::InputManager()
 {
-	getGame->_gameIsRunning = false;
+
 }
 
 void InputManager::KeyBoardInput()
 {
 	SDL_Event event;
-	while (SDL_PollEvent(&event) !=0)
+	while (SDL_PollEvent(&event) == 1)
 	{
 		if (event.type == SDL_QUIT)
 		{
-				getGame->_gameIsRunning = false;
+			_gameIsRunning = false;
 		}
 	}
 }
+
 
 InputManager::~InputManager()
 {
