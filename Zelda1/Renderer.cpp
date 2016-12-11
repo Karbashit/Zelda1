@@ -12,8 +12,8 @@ SDL_Renderer * Renderer::getPointer() const
 
 void Renderer::Update()
 {
-	SDL_SetRenderDrawColor(_renderer, 0x55, 0x11, 0x55, 0xFF);
 	SDL_RenderClear(_renderer);
+	SDL_SetRenderDrawColor(_renderer, 50, 50, 255, 255);
 }
 
 void Renderer::DrawRect(SDL_Rect rect, SDL_Color color)

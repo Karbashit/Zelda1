@@ -12,6 +12,7 @@ public:
 	~InputManager();
 	void KeyBoardInput();
 	
+	void OnKeyEvent(const SDL_Keycode& key, bool isDown);
 
 private:
 

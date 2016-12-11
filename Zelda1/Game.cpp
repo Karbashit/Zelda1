@@ -1,16 +1,23 @@
 #include "Game.h"
 
-bool _gameIsRunning = true;
+	bool Global::_gameIsRunning = true;
+	bool Global::up		= false;
+	bool Global::down	= false;
+	bool Global::left	= false;
+	bool Global::right	= false;
+	int Global::playerSpeed = 1;
 
-Game::Game() :	_window{"Zelda 1", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 600}, 
+Game::Game() :	_window{"Zelda 1", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720}, 
 				_renderer{ _window },
-				_inputManager{new InputManager}
+				_inputManager{new InputManager},
+				_player{ {100, 100, 50, 50}, Global::playerSpeed, {50, 50, 50, 255} }
+
 {
 }
 
 void Game::Run()
 {
-	while (_gameIsRunning)
+	while (Global::_gameIsRunning)
 	{
 		Update();
 	}
@@ -18,13 +25,33 @@ void Game::Run()
 
 void Game::Update()
 {
-	SDL_Rect rect = { 50, 50, 50, 50 };
-	SDL_Color color = { 0x20, 0x11, 0x10, 0xFF };
+	UpdatePlayerPosition();
+
 	_renderer.Update();
-	_renderer.DrawRect(rect, color);
+	_player.Render(_renderer);
 	_renderer.Present();
 
-	getInput->KeyBoardInput();
+	_getInput->KeyBoardInput();
+}
+
+void Game::UpdatePlayerPosition()
+{
+	if (Global::up)
+	{
+		_player.Move(0, -Global::playerSpeed);
+	}
+	if (Global::down)
+	{
+		_player.Move(0, Global::playerSpeed);
+	}
+	if (Global::left)
+	{
+		_player.Move(-Global::playerSpeed, 0);
+	}
+	if (Global::right)
+	{
+		_player.Move(Global::playerSpeed, 0);
+	}
 }
 
 Game::~Game()
