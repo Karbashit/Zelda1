@@ -13,9 +13,8 @@ namespace Global
 	extern bool down;
 	extern bool left;
 	extern bool right;
-	
-	extern int playerSpeed;
 
+	extern int playerSpeed;
 }
 
 class InputManager;
@@ -29,6 +28,8 @@ public:
 	void Run();
 	void Update();
 	void UpdatePlayerPosition();
+	bool CollisionCheck(int parentx, int parenty, int parentsize, int childx, int childy, int childsize);
+	void CheckForCollisions();
 
 	InputManager* _getInput;
 	InputManager* _inputManager;
@@ -36,6 +37,7 @@ private:
 	Window _window;
 	Renderer _renderer;
 	Link _player;
+	Link _TestObject2;
 
 };
 
