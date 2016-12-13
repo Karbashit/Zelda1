@@ -24,7 +24,7 @@ void Renderer::DrawRect(SDL_Rect rect, SDL_Color color)
 
 void Renderer::DrawSprite(Sprite * sprite, int x, int y)
 {
-	SDL_Rect dstRect = { x, y, sprite};
+	SDL_Rect dstRect = { x, y, sprite/|};
 }
 
 
