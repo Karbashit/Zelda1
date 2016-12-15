@@ -33,6 +33,8 @@ public:
 
 	InputManager* _getInput;
 	InputManager* _inputManager;
+	Sprite* _playerSprite = nullptr;
+
 private:
 	Window _window;
 	Renderer _renderer;

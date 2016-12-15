@@ -1,18 +1,20 @@
 #include "Game.h"
 
-	bool Global::_gameIsRunning = true;
-	bool Global::up		= false;
-	bool Global::down	= false;
-	bool Global::left	= false;
-	bool Global::right	= false;
-	int Global::playerSpeed = 1;
+		bool Global::_gameIsRunning = true;
+		bool Global::up		= false;
+		bool Global::down	= false;
+		bool Global::left	= false;
+		bool Global::right	= false;
+		int Global::playerSpeed = 1;
 
-Game::Game() :	_window{"Zelda 1", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720}, 
+Game::Game() :	_window{"Zelda 1", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720},
 				_renderer{ _window },
 				_inputManager{new InputManager},
+				_getInput{ nullptr },
 				_player{ {100, 100, 50, 50}, Global::playerSpeed, {50, 50, 50, 255} },
 				_TestObject2{ {300, 300, 50, 50 }, Global::playerSpeed, { 100, 50, 50, 255 } }
 {
+	_playerSprite = _renderer.CreateSprite("../BMP/link_front.bmp", 0, 0, _player.GetRect().w, _player.GetRect().h);
 }
 
 void Game::Run()
@@ -29,11 +31,10 @@ void Game::Update()
 	UpdatePlayerPosition();
 
 	_renderer.Update();
-
 	_player.Render(_renderer);
-	_renderer.CreateSprite("../BMP/croak.bmp", _player.GetRect().x, _player.GetRect().y, _player.GetRect().w, _player.GetRect().h);
+	_renderer.DrawSprite(_player.GetRect().x, _player.GetRect().y, _playerSprite);
+	_renderer.FillRect(_TestObject2.GetRect());
 	_TestObject2.Render(_renderer);
-
 	_renderer.Present();
 
 	_getInput->KeyBoardInput();
@@ -78,7 +79,7 @@ void Game::CheckForCollisions()
 {
 	if (CollisionCheck(_player.GetRect().x, _player.GetRect().y, 50, _TestObject2.GetRect().x, _TestObject2.GetRect().y, 50))
 	{
-		std::cout << "Is Colliding" << std::endl;
+		std::cout << "Is Colliding. The collision works with other words." << std::endl;
 	}
 }
 

@@ -8,7 +8,6 @@ public:
 	void SetSource(int p_x, int p_y, int p_w, int p_h);
 	SDL_Rect GetSource();
 	SDL_Texture* GetTexture();
-	Sprite();
 private:
 	Sprite();
 	SDL_Texture* m_texture;

@@ -1,0 +1,1417 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Solution_Path">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="SolutionPath" type="xs:string" minOccurs="0" />
+                <xs:element name="SolutionVersion" type="xs:string" minOccurs="0" />
+                <xs:element name="PlogVersion" type="xs:unsignedInt" minOccurs="0" />
+                <xs:element name="ModificationDate" msdata:DateTimeMode="Utc" type="xs:dateTime" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="PVS-Studio_Analysis_Log">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="FavIcon" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Level" type="xs:unsignedInt" minOccurs="0" />
+                <xs:element name="DefaultOrder" type="xs:int" minOccurs="0" />
+                <xs:element name="ErrorCode" type="xs:string" minOccurs="0" />
+                <xs:element name="Message" type="xs:string" />
+                <xs:element name="Project" type="xs:string" minOccurs="0" />
+                <xs:element name="ShortFile" type="xs:string" minOccurs="0" />
+                <xs:element name="Line" type="xs:int" />
+                <xs:element name="FalseAlarm" type="xs:boolean" minOccurs="0" />
+                <xs:element name="File" type="xs:string" />
+                <xs:element name="CodePrev" type="xs:unsignedInt" minOccurs="0" />
+                <xs:element name="CodeCurrent" type="xs:unsignedInt" minOccurs="0" />
+                <xs:element name="CodeNext" type="xs:unsignedInt" minOccurs="0" />
+                <xs:element name="TrialMessage" type="xs:boolean" minOccurs="0" />
+                <xs:element name="Analyzer" type="xs:int" minOccurs="0" />
+                <xs:element name="LineExtension" type="xs:string" minOccurs="0" />
+                <xs:element name="Retired" type="xs:boolean" default="false" minOccurs="0" />
+                <xs:element name="AnalyzedSourceFiles" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//PVS-Studio_Analysis_Log" />
+        <xs:field xpath="Line" />
+        <xs:field xpath="Message" />
+        <xs:field xpath="File" />
+      </xs:unique>
+    </xs:element>
+  </xs:schema>
+  <Solution_Path>
+    <SolutionPath>C:\Users\Karba\Desktop\VS\Zelda1\Zelda1.sln</SolutionPath>
+    <SolutionVersion>14.0</SolutionVersion>
+    <PlogVersion>4</PlogVersion>
+    <ModificationDate>2016-12-14T15:26:44.5087751Z</ModificationDate>
+  </Solution_Path>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>1</DefaultOrder>
+    <ErrorCode>V112</ErrorCode>
+    <Message>Dangerous magic number 4 used: ...ords + 3) / 4;.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_stdinc.h</ShortFile>
+    <Line>375</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_stdinc.h</File>
+    <CodePrev>43</CodePrev>
+    <CodeCurrent>172841271</CodeCurrent>
+    <CodeNext>3853907185</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>2</DefaultOrder>
+    <ErrorCode>V206</ErrorCode>
+    <Message>Explicit conversion from 'void *' to 'unsigned int *'.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_stdinc.h</ShortFile>
+    <Line>376</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_stdinc.h</File>
+    <CodePrev>172841271</CodePrev>
+    <CodeCurrent>3853907185</CodeCurrent>
+    <CodeNext>7858417</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>3</DefaultOrder>
+    <ErrorCode>V112</ErrorCode>
+    <Message>Dangerous magic number 4 used: ...h (dwords % 4).</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_stdinc.h</ShortFile>
+    <Line>380</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_stdinc.h</File>
+    <CodePrev>5607</CodePrev>
+    <CodeCurrent>2918157</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>4</DefaultOrder>
+    <ErrorCode>V112</ErrorCode>
+    <Message>Dangerous magic number 4 used: ...c, dwords * 4);.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_stdinc.h</ShortFile>
+    <Line>520</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_stdinc.h</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>306738946</CodeCurrent>
+    <CodeNext>125</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>5</DefaultOrder>
+    <ErrorCode>V126</ErrorCode>
+    <Message>Be advised that the size of the type 'long' varies between LLP64/LP64 data models.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_stdinc.h</ShortFile>
+    <Line>422</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_stdinc.h</File>
+    <CodePrev>4288761916</CodePrev>
+    <CodeCurrent>2214656559</CodeCurrent>
+    <CodeNext>2788423032</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>6</DefaultOrder>
+    <ErrorCode>V126</ErrorCode>
+    <Message>Be advised that the size of the type 'long' varies between LLP64/LP64 data models.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_stdinc.h</ShortFile>
+    <Line>423</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_stdinc.h</File>
+    <CodePrev>2214656559</CodePrev>
+    <CodeCurrent>2788423032</CodeCurrent>
+    <CodeNext>532741195</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>7</DefaultOrder>
+    <ErrorCode>V126</ErrorCode>
+    <Message>Be advised that the size of the type 'long' varies between LLP64/LP64 data models.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_stdinc.h</ShortFile>
+    <Line>415</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_stdinc.h</File>
+    <CodePrev>3901466229</CodePrev>
+    <CodeCurrent>3495005625</CodeCurrent>
+    <CodeNext>3492507784</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>8</DefaultOrder>
+    <ErrorCode>V126</ErrorCode>
+    <Message>Be advised that the size of the type 'long' varies between LLP64/LP64 data models.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_stdinc.h</ShortFile>
+    <Line>416</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_stdinc.h</File>
+    <CodePrev>3495005625</CodePrev>
+    <CodeCurrent>3492507784</CodeCurrent>
+    <CodeNext>523824690</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>9</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_assert.h</ShortFile>
+    <Line>113</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_assert.h</File>
+    <CodePrev>1475672467</CodePrev>
+    <CodeCurrent>35743603</CodeCurrent>
+    <CodeNext>17872269</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>10</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_assert.h</ShortFile>
+    <Line>114</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_assert.h</File>
+    <CodePrev>35743603</CodePrev>
+    <CodeCurrent>17872269</CodeCurrent>
+    <CodeNext>76181</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>11</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_assert.h</ShortFile>
+    <Line>116</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_assert.h</File>
+    <CodePrev>76181</CodePrev>
+    <CodeCurrent>17873459</CodeCurrent>
+    <CodeNext>907672298</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>12</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_assert.h</ShortFile>
+    <Line>117</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_assert.h</File>
+    <CodePrev>17873459</CodePrev>
+    <CodeCurrent>907672298</CodeCurrent>
+    <CodeNext>2445281</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>13</DefaultOrder>
+    <ErrorCode>V112</ErrorCode>
+    <Message>Dangerous magic number 0xFFFFFFFF used: ...Uint32, x &amp; 0xFFFFFFFF);.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_endian.h</ShortFile>
+    <Line>180</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_endian.h</File>
+    <CodePrev>3678982511</CodePrev>
+    <CodeCurrent>3051674564</CodeCurrent>
+    <CodeNext>7003</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>14</DefaultOrder>
+    <ErrorCode>V112</ErrorCode>
+    <Message>Dangerous magic number 32 used: x &gt;&gt;= 32;.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_endian.h</ShortFile>
+    <Line>181</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_endian.h</File>
+    <CodePrev>3051674564</CodePrev>
+    <CodeCurrent>7003</CodeCurrent>
+    <CodeNext>3051673668</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>15</DefaultOrder>
+    <ErrorCode>V112</ErrorCode>
+    <Message>Dangerous magic number 0xFFFFFFFF used: ...Uint32, x &amp; 0xFFFFFFFF);.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_endian.h</ShortFile>
+    <Line>182</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_endian.h</File>
+    <CodePrev>7003</CodePrev>
+    <CodeCurrent>3051673668</CodeCurrent>
+    <CodeNext>8194485</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>16</DefaultOrder>
+    <ErrorCode>V112</ErrorCode>
+    <Message>Dangerous magic number 32 used: x &lt;&lt;= 32;.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_endian.h</ShortFile>
+    <Line>184</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_endian.h</File>
+    <CodePrev>8194485</CodePrev>
+    <CodeCurrent>6971</CodeCurrent>
+    <CodeNext>8980877</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>17</DefaultOrder>
+    <ErrorCode>V126</ErrorCode>
+    <Message>Be advised that the size of the type 'long' varies between LLP64/LP64 data models.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_thread.h</ShortFile>
+    <Line>49</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_thread.h</File>
+    <CodePrev>5122307</CodePrev>
+    <CodeCurrent>1073097385</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>18</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_rwops.h</ShortFile>
+    <Line>116</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_rwops.h</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>44961</CodeCurrent>
+    <CodeNext>84641</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>19</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_rwops.h</ShortFile>
+    <Line>117</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_rwops.h</File>
+    <CodePrev>44961</CodePrev>
+    <CodeCurrent>84641</CodeCurrent>
+    <CodeNext>84835</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>20</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_rwops.h</ShortFile>
+    <Line>118</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_rwops.h</File>
+    <CodePrev>84641</CodePrev>
+    <CodeCurrent>84835</CodeCurrent>
+    <CodeNext>11451</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>21</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_rwops.h</ShortFile>
+    <Line>113</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_rwops.h</File>
+    <CodePrev>1795107</CodePrev>
+    <CodeCurrent>5523</CodeCurrent>
+    <CodeNext>3030</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>22</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_rwops.h</ShortFile>
+    <Line>132</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_rwops.h</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>122197</CodeCurrent>
+    <CodeNext>122321</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>23</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_rwops.h</ShortFile>
+    <Line>133</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_rwops.h</File>
+    <CodePrev>122197</CodePrev>
+    <CodeCurrent>122321</CodeCurrent>
+    <CodeNext>122039</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>24</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_rwops.h</ShortFile>
+    <Line>134</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_rwops.h</File>
+    <CodePrev>122321</CodePrev>
+    <CodeCurrent>122039</CodeCurrent>
+    <CodeNext>1485</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>25</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_rwops.h</ShortFile>
+    <Line>138</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_rwops.h</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>89965</CodeCurrent>
+    <CodeNext>89963</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>26</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_rwops.h</ShortFile>
+    <Line>139</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_rwops.h</File>
+    <CodePrev>89965</CodePrev>
+    <CodeCurrent>89963</CodeCurrent>
+    <CodeNext>21955</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>27</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_rwops.h</ShortFile>
+    <Line>57</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_rwops.h</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>3271772897</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>28</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_rwops.h</ShortFile>
+    <Line>65</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_rwops.h</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>883563416</CodeCurrent>
+    <CodeNext>75045</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>29</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_rwops.h</ShortFile>
+    <Line>74</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_rwops.h</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>121407427</CodeCurrent>
+    <CodeNext>1386732373</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>30</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_rwops.h</ShortFile>
+    <Line>83</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_rwops.h</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>904466203</CodeCurrent>
+    <CodeNext>173341525</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>31</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_rwops.h</ShortFile>
+    <Line>91</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_rwops.h</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>3540994864</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>32</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_audio.h</ShortFile>
+    <Line>177</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_audio.h</File>
+    <CodePrev>3502024631</CodePrev>
+    <CodeCurrent>3667733682</CodeCurrent>
+    <CodeNext>244218755</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>33</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_audio.h</ShortFile>
+    <Line>178</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_audio.h</File>
+    <CodePrev>3667733682</CodePrev>
+    <CodeCurrent>244218755</CodeCurrent>
+    <CodeNext>1223033</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>34</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_audio.h</ShortFile>
+    <Line>206</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_audio.h</File>
+    <CodePrev>1735471562</CodePrev>
+    <CodeCurrent>2485573784</CodeCurrent>
+    <CodeNext>3443873004</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>35</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_audio.h</ShortFile>
+    <Line>211</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_audio.h</File>
+    <CodePrev>2202667574</CodePrev>
+    <CodeCurrent>2617254448</CodeCurrent>
+    <CodeNext>2434894356</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>36</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_pixels.h</ShortFile>
+    <Line>305</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_pixels.h</File>
+    <CodePrev>76429</CodePrev>
+    <CodeCurrent>7319693</CodeCurrent>
+    <CodeNext>978211</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>37</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_pixels.h</ShortFile>
+    <Line>316</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_pixels.h</File>
+    <CodePrev>488319</CodePrev>
+    <CodeCurrent>58075409</CodeCurrent>
+    <CodeNext>15216167</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>38</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_pixels.h</ShortFile>
+    <Line>333</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_pixels.h</File>
+    <CodePrev>149843</CodePrev>
+    <CodeCurrent>2083375418</CodeCurrent>
+    <CodeNext>4877951</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>39</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_surface.h</ShortFile>
+    <Line>72</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_surface.h</File>
+    <CodePrev>3702035390</CodePrev>
+    <CodeCurrent>2469633636</CodeCurrent>
+    <CodeNext>161321919</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>40</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_surface.h</ShortFile>
+    <Line>75</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_surface.h</File>
+    <CodePrev>614962111</CodePrev>
+    <CodeCurrent>3153929181</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>41</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_surface.h</ShortFile>
+    <Line>78</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_surface.h</File>
+    <CodePrev>804044558</CodePrev>
+    <CodeCurrent>3824755669</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>42</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_surface.h</ShortFile>
+    <Line>82</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_surface.h</File>
+    <CodePrev>1249612735</CodePrev>
+    <CodeCurrent>4125922229</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>43</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_surface.h</ShortFile>
+    <Line>88</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_surface.h</File>
+    <CodePrev>1135372675</CodePrev>
+    <CodeCurrent>952756387</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>44</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_video.h</ShortFile>
+    <Line>59</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_video.h</File>
+    <CodePrev>789032065</CodePrev>
+    <CodeCurrent>282731602</CodeCurrent>
+    <CodeNext>4900265</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>45</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_events.h</ShortFile>
+    <Line>469</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_events.h</File>
+    <CodePrev>3913095</CodePrev>
+    <CodeCurrent>2768467037</CodeCurrent>
+    <CodeNext>1397539996</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>46</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_events.h</ShortFile>
+    <Line>501</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_events.h</File>
+    <CodePrev>3321743437</CodePrev>
+    <CodeCurrent>1475861036</CodeCurrent>
+    <CodeNext>938990124</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>47</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_events.h</ShortFile>
+    <Line>502</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_events.h</File>
+    <CodePrev>1475861036</CodePrev>
+    <CodeCurrent>938990124</CodeCurrent>
+    <CodeNext>1214083</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>48</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_events.h</ShortFile>
+    <Line>519</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_events.h</File>
+    <CodePrev>3913095</CodePrev>
+    <CodeCurrent>1896644439</CodeCurrent>
+    <CodeNext>2424899</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>49</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_haptic.h</ShortFile>
+    <Line>707</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_haptic.h</File>
+    <CodePrev>1416431280</CodePrev>
+    <CodeCurrent>2087644098</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>50</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_messagebox.h</ShortFile>
+    <Line>60</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_messagebox.h</File>
+    <CodePrev>3529802602</CodePrev>
+    <CodeCurrent>52481969</CodeCurrent>
+    <CodeNext>2507476065</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>51</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_messagebox.h</ShortFile>
+    <Line>95</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_messagebox.h</File>
+    <CodePrev>2604093013</CodePrev>
+    <CodeCurrent>308160638</CodeCurrent>
+    <CodeNext>342479053</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>52</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_messagebox.h</ShortFile>
+    <Line>96</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_messagebox.h</File>
+    <CodePrev>308160638</CodePrev>
+    <CodeCurrent>342479053</CodeCurrent>
+    <CodeNext>3145068908</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>53</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_messagebox.h</ShortFile>
+    <Line>97</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_messagebox.h</File>
+    <CodePrev>342479053</CodePrev>
+    <CodeCurrent>3145068908</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>54</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_messagebox.h</ShortFile>
+    <Line>100</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_messagebox.h</File>
+    <CodePrev>620701</CodePrev>
+    <CodeCurrent>1963745078</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>55</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_messagebox.h</ShortFile>
+    <Line>102</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_messagebox.h</File>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>3382770719</CodeCurrent>
+    <CodeNext>39179425</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>56</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sdl_render.h</ShortFile>
+    <Line>80</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\external\sdl\include\sdl_render.h</File>
+    <CodePrev>123</CodePrev>
+    <CodeCurrent>3558864436</CodeCurrent>
+    <CodeNext>4026905050</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sdlsystem.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>57</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>window.h</ShortFile>
+    <Line>14</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\zelda1\window.h</File>
+    <CodePrev>3652882072</CodePrev>
+    <CodeCurrent>29090761</CodeCurrent>
+    <CodeNext>193</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\window.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>58</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>sprite.h</ShortFile>
+    <Line>13</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\zelda1\sprite.h</File>
+    <CodePrev>32257</CodePrev>
+    <CodeCurrent>232434833</CodeCurrent>
+    <CodeNext>3128609989</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\sprite.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>59</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>renderer.h</ShortFile>
+    <Line>24</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\zelda1\renderer.h</File>
+    <CodePrev>11496</CodePrev>
+    <CodeCurrent>464815371</CodeCurrent>
+    <CodeNext>115571093</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>60</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>renderer.h</ShortFile>
+    <Line>25</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\zelda1\renderer.h</File>
+    <CodePrev>464815371</CodePrev>
+    <CodeCurrent>115571093</CodeCurrent>
+    <CodeNext>2641234640</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\link.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>1</Level>
+    <DefaultOrder>61</DefaultOrder>
+    <ErrorCode>V004</ErrorCode>
+    <Message>Diagnostics from the 64-bit rule set are not entirely accurate without the appropriate 64-bit compiler. Consider utilizing 64-bit compiler if possible.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile xml:space="preserve"> </ShortFile>
+    <Line>1</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File xml:space="preserve"> </File>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>0</CodeCurrent>
+    <CodeNext>0</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>62</DefaultOrder>
+    <ErrorCode>V813</ErrorCode>
+    <Message>Decreased performance. The 'color' argument should probably be rendered as a constant reference.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>renderer.cpp</ShortFile>
+    <Line>19</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp</File>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>932849292</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>63</DefaultOrder>
+    <ErrorCode>V801</ErrorCode>
+    <Message>Decreased performance. It is better to redefine the first function argument as a reference. Consider replacing 'const .. p_file' with 'const .. &amp;p_file'.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>renderer.cpp</ShortFile>
+    <Line>36</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp</File>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>2551637122</CodeCurrent>
+    <CodeNext>4276813263</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>1</Level>
+    <DefaultOrder>64</DefaultOrder>
+    <ErrorCode>V730</ErrorCode>
+    <Message>Not all members of a class are initialized inside the constructor. Consider inspecting: _surface.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>renderer.cpp</ShortFile>
+    <Line>3</Line>
+    <FalseAlarm>true</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\zelda1\renderer.cpp</File>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>3785333881</CodeCurrent>
+    <CodeNext>123</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>65</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>game.h</ShortFile>
+    <Line>34</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\zelda1\game.h</File>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>438645703</CodeCurrent>
+    <CodeNext>2723408226</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>3</Level>
+    <DefaultOrder>66</DefaultOrder>
+    <ErrorCode>V122</ErrorCode>
+    <Message>Memsize type is used in the struct/class.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>game.h</ShortFile>
+    <Line>35</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\zelda1\game.h</File>
+    <CodePrev>438645703</CodePrev>
+    <CodeCurrent>2723408226</CodeCurrent>
+    <CodeNext>11496</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>1</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles>c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\source.cpp*c:\users\karba\desktop\vs\zelda1\zelda1\inputmanager.cpp</AnalyzedSourceFiles>
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>2</Level>
+    <DefaultOrder>67</DefaultOrder>
+    <ErrorCode>V807</ErrorCode>
+    <Message>Decreased performance. Consider creating a reference to avoid using the '_player.GetRect()' expression repeatedly.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>game.cpp</ShortFile>
+    <Line>34</Line>
+    <FalseAlarm>false</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp</File>
+    <CodePrev>3942390281</CodePrev>
+    <CodeCurrent>3445068203</CodeCurrent>
+    <CodeNext>2192316944</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>5</Analyzer>
+    <LineExtension>34,34,34,34</LineExtension>
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+  <PVS-Studio_Analysis_Log>
+    <FavIcon>false</FavIcon>
+    <Level>1</Level>
+    <DefaultOrder>68</DefaultOrder>
+    <ErrorCode>V730</ErrorCode>
+    <Message>Not all members of a class are initialized inside the constructor. Consider inspecting: _getInput.</Message>
+    <Project>Zelda1</Project>
+    <ShortFile>game.cpp</ShortFile>
+    <Line>10</Line>
+    <FalseAlarm>true</FalseAlarm>
+    <File>c:\users\karba\desktop\vs\zelda1\zelda1\game.cpp</File>
+    <CodePrev>0</CodePrev>
+    <CodeCurrent>145751029</CodeCurrent>
+    <CodeNext>31121714</CodeNext>
+    <TrialMessage>false</TrialMessage>
+    <Analyzer>4</Analyzer>
+    <LineExtension />
+    <Retired>false</Retired>
+    <AnalyzedSourceFiles />
+  </PVS-Studio_Analysis_Log>
+</NewDataSet>

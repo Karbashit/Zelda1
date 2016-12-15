@@ -15,16 +15,18 @@ public:
 
 	void Update();
 	void DrawRect(SDL_Rect rect, SDL_Color color);
-	void DrawSprite(Sprite* sprite, int x, int y);
+	void DrawSprite(int x, int y, Sprite* sprite);
 	void Present();
-	Sprite* CreateSprite(const std::string p_file, unsigned int p_x, unsigned int p_y, unsigned int p_w, unsigned int p_h);
+	void FillRect(SDL_Rect rect);
+
+	Sprite* CreateSprite(const std::string file, unsigned int x, unsigned int y, unsigned int w, unsigned int h);
 
 private:
 	SDL_Renderer* _renderer;
 	SDL_Surface* _surface;
 	Renderer(const Renderer&) = delete;
 	Renderer& operator=(Renderer&) = delete;
-	std::map<std::string, SDL_Texture*> m_textures;
-	std::vector<Sprite*> m_sprites;
+	std::map<std::string, SDL_Texture*> textures;
+	std::vector<Sprite*> sprites;
 };
 

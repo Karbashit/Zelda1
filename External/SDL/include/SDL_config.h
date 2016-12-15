@@ -23,6 +23,7 @@
 #define _SDL_config_windows_h
 
 #include "SDL_platform.h"
+#include "STDDEF.h"
 
 /* This is a set of defines to configure the SDL features */
 
