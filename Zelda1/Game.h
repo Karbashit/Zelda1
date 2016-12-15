@@ -2,7 +2,6 @@
 #include "Window.h"
 #include "Renderer.h"
 #include "InputManager.h"
-#include "Config.h"
 #include "Link.h"
 
 namespace Global
@@ -31,9 +30,17 @@ public:
 	bool CollisionCheck(int parentx, int parenty, int parentsize, int childx, int childy, int childsize);
 	void CheckForCollisions();
 
+	Sprite* CheckForAnimationType(Sprite* animation);
+	Sprite* _currentSprite;
+
 	InputManager* _getInput;
 	InputManager* _inputManager;
-	Sprite* _playerSprite = nullptr;
+
+	Sprite* _playerIdleDown;
+	Sprite* _playerIdleUp;
+	Sprite* _playerIdleLeft;
+	Sprite* _playerIdleRight;
+
 
 private:
 	Window _window;

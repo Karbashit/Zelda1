@@ -1,7 +1,5 @@
 #include "Link.h"
 
-
-
 Link::Link(SDL_Rect rect, int speed, SDL_Color color)
 {
 	_rect = rect;

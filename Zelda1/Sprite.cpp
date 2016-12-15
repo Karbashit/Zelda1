@@ -1,7 +1,6 @@
 #include "Sprite.h"
 
-
-Sprite::Sprite() // Private
+Sprite::Sprite()
 {
 };
 
@@ -26,7 +25,7 @@ SDL_Rect Sprite::GetSource()
 SDL_Texture * Sprite::GetTexture()
 {
 	return m_texture;
-};
+}
 
 Sprite::~Sprite()
 {

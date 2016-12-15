@@ -1,5 +1,8 @@
 #pragma once
 #include "SDLSystem.h"
+#include "Renderer.h"
+
+
 class Sprite
 {
 public:
@@ -8,6 +11,8 @@ public:
 	void SetSource(int p_x, int p_y, int p_w, int p_h);
 	SDL_Rect GetSource();
 	SDL_Texture* GetTexture();
+
+
 private:
 	Sprite();
 	SDL_Texture* m_texture;

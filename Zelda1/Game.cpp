@@ -5,16 +5,22 @@
 		bool Global::down	= false;
 		bool Global::left	= false;
 		bool Global::right	= false;
+
 		int Global::playerSpeed = 1;
 
 Game::Game() :	_window{"Zelda 1", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720},
 				_renderer{ _window },
 				_inputManager{new InputManager},
 				_getInput{ nullptr },
-				_player{ {100, 100, 50, 50}, Global::playerSpeed, {50, 50, 50, 255} },
+				_player{ {100, 100, 100, 100}, Global::playerSpeed, {50, 50, 50, 255} },
 				_TestObject2{ {300, 300, 50, 50 }, Global::playerSpeed, { 100, 50, 50, 255 } }
 {
-	_playerSprite = _renderer.CreateSprite("../BMP/link_front.bmp", 0, 0, _player.GetRect().w, _player.GetRect().h);
+	_playerIdleDown = _renderer.CreateSprite("../BMP/link_idle_down.bmp", 0, 0, _player.GetRect().w, _player.GetRect().h);
+	_playerIdleUp = _renderer.CreateSprite("../BMP/link_idle_up.bmp", 0, 0, _player.GetRect().w, _player.GetRect().h);
+	_playerIdleRight = _renderer.CreateSprite("../BMP/link_idle_right.bmp", 0, 0, _player.GetRect().w, _player.GetRect().h);
+	_playerIdleLeft = _renderer.CreateSprite("../BMP/link_idle_left.bmp", 0, 0, _player.GetRect().w, _player.GetRect().h);
+	_currentSprite = _renderer.CreateSprite("../BMP/link_idle_down.bmp", 0, 0, _player.GetRect().w, _player.GetRect().h);
+
 }
 
 void Game::Run()
@@ -32,12 +38,12 @@ void Game::Update()
 
 	_renderer.Update();
 	_player.Render(_renderer);
-	_renderer.DrawSprite(_player.GetRect().x, _player.GetRect().y, _playerSprite);
+	CheckForAnimationType(_currentSprite);
+	_renderer.DrawSprite(_player.GetRect().x, _player.GetRect().y, _currentSprite);
 	_renderer.FillRect(_TestObject2.GetRect());
 	_TestObject2.Render(_renderer);
-	_renderer.Present();
-
 	_getInput->KeyBoardInput();
+	_renderer.Present();
 }
 
 void Game::UpdatePlayerPosition()
@@ -81,6 +87,27 @@ void Game::CheckForCollisions()
 	{
 		std::cout << "Is Colliding. The collision works with other words." << std::endl;
 	}
+}
+
+Sprite* Game::CheckForAnimationType(Sprite* animation)
+{
+	if(Global::up)
+	{
+			_currentSprite = _playerIdleUp;
+	}
+	if (Global::down)
+	{
+			_currentSprite = _playerIdleDown;	
+	}
+	if (Global::right)
+	{
+			_currentSprite = _playerIdleRight;
+	}
+	if (Global::left)
+	{
+			_currentSprite = _playerIdleLeft;
+	}
+		return animation;
 }
 
 Game::~Game()
