@@ -15,7 +15,7 @@ int main(int argc, char* argv[])
 	}
 	catch (...)
 	{
-		std::cout << "somethings wrong bro" << std::endl;
+		std::cout << "Something is wrong." << std::endl;
 	}
 	return 0;
 }

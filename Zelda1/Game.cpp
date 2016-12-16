@@ -5,7 +5,6 @@
 		bool Global::down	= false;
 		bool Global::left	= false;
 		bool Global::right	= false;
-
 		int Global::playerSpeed = 1;
 
 Game::Game() :	_window{"Zelda 1", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720},
@@ -20,7 +19,6 @@ Game::Game() :	_window{"Zelda 1", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED
 	_playerIdleRight = _renderer.CreateSprite("../BMP/link_idle_right.bmp", 0, 0, _player.GetRect().w, _player.GetRect().h);
 	_playerIdleLeft = _renderer.CreateSprite("../BMP/link_idle_left.bmp", 0, 0, _player.GetRect().w, _player.GetRect().h);
 	_currentSprite = _renderer.CreateSprite("../BMP/link_idle_down.bmp", 0, 0, _player.GetRect().w, _player.GetRect().h);
-
 }
 
 void Game::Run()
@@ -66,7 +64,7 @@ void Game::UpdatePlayerPosition()
 	}
 }
 
-bool Game::CollisionCheck(int parentx, int parenty, int parentsize, int childx, int childy, int childsize) //Only takes one size. (Squares only)
+bool Game::CollisionCheck(int parentx, int parenty, int parentsize, int childx, int childy, int childsize)
 {
 	if (parentx - parentsize / 2 < childx + childsize / 2 &&
 		parentx + parentsize / 2 > childx - childsize / 2 &&
