@@ -154,28 +154,34 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="IState.cpp" />
+    <ClCompile Include="LeftOne.cpp" />
     <ClCompile Include="Link.cpp" />
     <ClCompile Include="OverworldStartLocation.cpp" />
     <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="RightOne.cpp" />
     <ClCompile Include="SDLSystem.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="StateManager.cpp" />
     <ClCompile Include="Terrain.cpp" />
+    <ClCompile Include="UpOne.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="IState.h" />
+    <ClInclude Include="LeftOne.h" />
     <ClInclude Include="Link.h" />
     <ClInclude Include="OverworldStartLocation.h" />
     <ClInclude Include="Renderer.h" />
+    <ClInclude Include="RightOne.h" />
     <ClInclude Include="SDLSystem.h" />
     <ClInclude Include="ServiceLocator.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="StateManager.h" />
     <ClInclude Include="Terrain.h" />
+    <ClInclude Include="UpOne.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

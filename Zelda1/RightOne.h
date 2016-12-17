@@ -7,7 +7,7 @@ class Renderer;
 class Sprite;
 class Terrain;
 
-class OverworldStartLocation : public IState
+class RightOne : public IState
 {
 public:
 	void UpdatePlayerArea();

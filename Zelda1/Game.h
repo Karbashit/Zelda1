@@ -4,8 +4,12 @@
 #include "InputManager.h"
 #include "Link.h"
 #include "StateManager.h"
-#include "OverworldStartLocation.h"
 #include "Terrain.h"
+
+#include "OverworldStartLocation.h"
+#include "UpOne.h"
+#include "LeftOne.h"
+#include "RightOne.h"
 
 namespace Global
 {
@@ -17,13 +21,31 @@ namespace Global
 	extern bool right;
 
 	extern int playerSpeed;
+	extern int _screenWidth;
+	extern int _screenHeight;
+
+	extern Link _player;
 
 	extern 	Window _window;
 	extern Renderer _renderer;
+	extern StateManager* _stateManager;
 
 	extern Terrain _startingLocation;
 	extern std::string _startingLocationBmp;
 	extern Sprite* _spriteStartingLocation;
+
+	extern Terrain _upOne;
+	extern std::string _upOneBmp;
+	extern Sprite* _spriteUpOne;
+
+	extern Terrain _leftOne;
+	extern std::string _leftOneBmp;
+	extern Sprite* _spriteLeftOne;
+
+	extern Terrain _rightOne;
+	extern std::string _rightOneBmp;
+	extern Sprite* _spriteRightOne;
+
 }
 
 class StateManager;
@@ -55,12 +77,12 @@ public:
 
 
 private:
-	StateManager* _stateManager;
-
-	Link _player;
 	Link _TestObject2;
 
 	unsigned int _lastTick;
 	float _delta;
+
+	int _screenWidth = 1280;
+	int _screenHeight = 720;
 };
 

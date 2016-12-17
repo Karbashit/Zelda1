@@ -90,6 +90,15 @@
     <ClCompile Include="Terrain.cpp">
       <Filter>Source Files\Player, Terrain &amp; Creatures + Properties\Terrain</Filter>
     </ClCompile>
+    <ClCompile Include="UpOne.cpp">
+      <Filter>Source Files\World\Overworld</Filter>
+    </ClCompile>
+    <ClCompile Include="LeftOne.cpp">
+      <Filter>Source Files\World\Overworld</Filter>
+    </ClCompile>
+    <ClCompile Include="RightOne.cpp">
+      <Filter>Source Files\World\Overworld</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SDLSystem.h">
@@ -127,6 +136,15 @@
     </ClInclude>
     <ClInclude Include="Game.h">
       <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UpOne.h">
+      <Filter>Source Files\World\Overworld</Filter>
+    </ClInclude>
+    <ClInclude Include="LeftOne.h">
+      <Filter>Source Files\World\Overworld</Filter>
+    </ClInclude>
+    <ClInclude Include="RightOne.h">
+      <Filter>Source Files\World\Overworld</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
