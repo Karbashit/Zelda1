@@ -13,6 +13,45 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\World">
+      <UniqueIdentifier>{1e50e8fa-8a11-4d87-aefd-b7e8eb8d8ec5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\World\Overworld">
+      <UniqueIdentifier>{7cb057e6-7286-406a-935e-75e8b1bf57e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\World\Dungeons">
+      <UniqueIdentifier>{00f6a76e-15d7-45f4-898d-12d1e8c32520}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StateManager">
+      <UniqueIdentifier>{687158e2-7eb0-4f10-a3c7-e20cc0b14499}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\InputManager">
+      <UniqueIdentifier>{edb1e8bf-4f50-4f67-845d-0f1f8629f0d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Sprite">
+      <UniqueIdentifier>{d78893e7-f7fb-4940-940f-40bfc6a8cd33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Player, Terrain &amp; Creatures + Properties">
+      <UniqueIdentifier>{5b90f2b3-315c-4e55-8999-a545b8ff8095}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Player, Terrain &amp; Creatures + Properties\Player">
+      <UniqueIdentifier>{e7f260c0-a1fd-4f2a-afb8-a34d1a5cf1f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Player, Terrain &amp; Creatures + Properties\Creatures">
+      <UniqueIdentifier>{2d5a4376-1d5f-41d6-b590-3ac9e93b12b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Player, Terrain &amp; Creatures + Properties\Terrain">
+      <UniqueIdentifier>{7e36fad9-71ac-4bac-9160-390a6c2f9208}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Display">
+      <UniqueIdentifier>{cef81a13-554a-4ea8-bcd5-06fa0f30d87f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Display\Window">
+      <UniqueIdentifier>{a24db2ad-5e0c-4660-9da5-0daf38f0744a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Display\Renderer">
+      <UniqueIdentifier>{f1f7e7f5-8a8e-48c0-8440-c673d5adf762}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -21,49 +60,73 @@
     <ClCompile Include="Game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Renderer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Window.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SDLSystem.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="InputManager.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="OverworldStartLocation.cpp">
+      <Filter>Source Files\World\Overworld</Filter>
     </ClCompile>
     <ClCompile Include="Link.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Player, Terrain &amp; Creatures + Properties\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="StateManager.cpp">
+      <Filter>Source Files\StateManager</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Source Files\InputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Source Files\Display\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source Files\Display\Window</Filter>
     </ClCompile>
     <ClCompile Include="Sprite.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="IState.cpp">
+      <Filter>Source Files\StateManager</Filter>
+    </ClCompile>
+    <ClCompile Include="SDLSystem.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Terrain.cpp">
+      <Filter>Source Files\Player, Terrain &amp; Creatures + Properties\Terrain</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Renderer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Window.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="SDLSystem.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="InputManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Config.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
+    <ClInclude Include="ServiceLocator.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StateManager.h">
+      <Filter>Source Files\StateManager</Filter>
+    </ClInclude>
     <ClInclude Include="Link.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files\Player, Terrain &amp; Creatures + Properties\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Source Files\InputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Source Files\Display\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Source Files\Display\Window</Filter>
     </ClInclude>
     <ClInclude Include="Sprite.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files\Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="IState.h">
+      <Filter>Source Files\StateManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Terrain.h">
+      <Filter>Source Files\Player, Terrain &amp; Creatures + Properties\Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="OverworldStartLocation.h">
+      <Filter>Source Files\World\Overworld</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

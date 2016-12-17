@@ -1,7 +1,7 @@
 #include "Renderer.h"
+#include "Game.h"
 
-Renderer::Renderer(const Window& w) : _renderer{ SDL_CreateRenderer(w.getPointer(), -1, SDL_VIDEO_OPENGL) },
-									  _surface{nullptr}
+Renderer::Renderer(const Window& w) : _renderer{ SDL_CreateRenderer(w.getPointer(), -1, SDL_VIDEO_OPENGL) }
 {
 }
 
@@ -14,7 +14,7 @@ SDL_Renderer * Renderer::getPointer() const
 void Renderer::Update()
 {
 	SDL_RenderClear(_renderer);
-	SDL_SetRenderDrawColor(_renderer, 50, 100, 255, 0xff);
+	SDL_SetRenderDrawColor(_renderer, 150, 100, 255, 0xff);
 }
 
 void Renderer::DrawRect(SDL_Rect rect, SDL_Color color)
@@ -49,7 +49,7 @@ Sprite* Renderer::CreateSprite(const std::string file, unsigned int x, unsigned 
 		SDL_Surface* xSurface = SDL_LoadBMP(file.c_str());
 		SDL_Texture* xTexture = SDL_CreateTextureFromSurface(_renderer, xSurface);
 		SDL_SetSurfaceAlphaMod(xSurface, 0xff);
-		SDL_SetColorKey(xSurface, SDL_TRUE, SDL_MapRGB(xSurface->format, 0, 0xff, 0xff));
+		SDL_SetColorKey(xSurface, SDL_TRUE, SDL_MapRGB(xSurface->format, 0xff, 0xff, 0xff));
 		SDL_FreeSurface(xSurface);
 		textures.insert(std::pair<std::string, SDL_Texture*>(file, xTexture));
 		it = textures.find(file);

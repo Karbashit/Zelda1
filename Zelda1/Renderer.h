@@ -23,7 +23,6 @@ public:
 
 private:
 	SDL_Renderer* _renderer;
-	SDL_Surface* _surface;
 	Renderer(const Renderer&) = delete;
 	Renderer& operator=(Renderer&) = delete;
 	std::map<std::string, SDL_Texture*> textures;

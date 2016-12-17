@@ -5,6 +5,9 @@
 #include <stdexcept>
 #include <vector>
 #include <map>
+#include <memory>
+#include <stdio.h>
+#include <tchar.h>
 
 class SDLSystem
 {

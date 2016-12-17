@@ -6,23 +6,33 @@
 		bool Global::left	= false;
 		bool Global::right	= false;
 		int Global::playerSpeed = 1;
+		Window Global::_window{ "Zelda 1", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720 };
+		Renderer Global::_renderer{ Global::_window };
 
-Game::Game() :	_window{"Zelda 1", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720},
-				_renderer{ _window },
+		Terrain Global::_startingLocation{ {0, 0, 1280, 720}, {50, 50, 50, 255} };
+		std::string Global::_startingLocationBmp{"../BMP/overworld_level_1.bmp" };
+		Sprite* Global::_spriteStartingLocation;
+
+Game::Game() :
 				_inputManager{new InputManager},
 				_getInput{ nullptr },
 				_player{ {100, 100, 100, 100}, Global::playerSpeed, {50, 50, 50, 255} },
-				_TestObject2{ {300, 300, 50, 50 }, Global::playerSpeed, { 100, 50, 50, 255 } }
+				_TestObject2{ {300, 300, 50, 50 }, Global::playerSpeed, { 50, 50, 50, 255 } },
+				_stateManager{new StateManager}	
 {
-	_playerIdleDown = _renderer.CreateSprite("../BMP/link_idle_down.bmp", 0, 0, _player.GetRect().w, _player.GetRect().h);
-	_playerIdleUp = _renderer.CreateSprite("../BMP/link_idle_up.bmp", 0, 0, _player.GetRect().w, _player.GetRect().h);
-	_playerIdleRight = _renderer.CreateSprite("../BMP/link_idle_right.bmp", 0, 0, _player.GetRect().w, _player.GetRect().h);
-	_playerIdleLeft = _renderer.CreateSprite("../BMP/link_idle_left.bmp", 0, 0, _player.GetRect().w, _player.GetRect().h);
-	_currentSprite = _renderer.CreateSprite("../BMP/link_idle_down.bmp", 0, 0, _player.GetRect().w, _player.GetRect().h);
+	_playerIdleDown = Global::_renderer.CreateSprite("../BMP/link_idle_down.bmp", 0, 0, _player.GetRect().w, _player.GetRect().h);
+	_playerIdleUp = Global::_renderer.CreateSprite("../BMP/link_idle_up.bmp", 0, 0, _player.GetRect().w, _player.GetRect().h);
+	_playerIdleRight = Global::_renderer.CreateSprite("../BMP/link_idle_right.bmp", 0, 0, _player.GetRect().w, _player.GetRect().h);
+	_playerIdleLeft = Global::_renderer.CreateSprite("../BMP/link_idle_left.bmp", 0, 0, _player.GetRect().w, _player.GetRect().h);
+	_currentSprite = Global::_renderer.CreateSprite("../BMP/link_idle_down.bmp", 0, 0, _player.GetRect().w, _player.GetRect().h);
+
 }
 
 void Game::Run()
 {
+	_stateManager->AddState("StartingLocationState", new OverworldStartLocation());
+	_stateManager->SetState("StartingLocationState");
+
 	while (Global::_gameIsRunning)
 	{
 		Update();
@@ -33,15 +43,19 @@ void Game::Update()
 {
 	CheckForCollisions();
 	UpdatePlayerPosition();
-
-	_renderer.Update();
-	_player.Render(_renderer);
 	CheckForAnimationType(_currentSprite);
-	_renderer.DrawSprite(_player.GetRect().x, _player.GetRect().y, _currentSprite);
-	_renderer.FillRect(_TestObject2.GetRect());
-	_TestObject2.Render(_renderer);
 	_getInput->KeyBoardInput();
-	_renderer.Present();
+
+	Global::_renderer.Update();
+	_stateManager->Update(_delta);
+	
+	_stateManager->Draw();
+	Global::_renderer.DrawSprite(_player.GetRect().x, _player.GetRect().y, _currentSprite);
+	Global::_renderer.FillRect(_TestObject2.GetRect());
+	_player.Render(Global::_renderer);
+	_TestObject2.Render(Global::_renderer);
+
+	Global::_renderer.Present();
 }
 
 void Game::UpdatePlayerPosition()
@@ -106,6 +120,12 @@ Sprite* Game::CheckForAnimationType(Sprite* animation)
 			_currentSprite = _playerIdleLeft;
 	}
 		return animation;
+}
+
+void Game::CalculateDeltatime()
+{
+	_delta = 0.001f * (SDL_GetTicks() - _lastTick);
+	_lastTick = SDL_GetTicks();
 }
 
 Game::~Game()

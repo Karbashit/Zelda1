@@ -3,6 +3,9 @@
 #include "Renderer.h"
 #include "InputManager.h"
 #include "Link.h"
+#include "StateManager.h"
+#include "OverworldStartLocation.h"
+#include "Terrain.h"
 
 namespace Global
 {
@@ -14,8 +17,16 @@ namespace Global
 	extern bool right;
 
 	extern int playerSpeed;
+
+	extern 	Window _window;
+	extern Renderer _renderer;
+
+	extern Terrain _startingLocation;
+	extern std::string _startingLocationBmp;
+	extern Sprite* _spriteStartingLocation;
 }
 
+class StateManager;
 class InputManager;
 
 class Game
@@ -29,6 +40,7 @@ public:
 	void UpdatePlayerPosition();
 	bool CollisionCheck(int parentx, int parenty, int parentsize, int childx, int childy, int childsize);
 	void CheckForCollisions();
+	void CalculateDeltatime();
 
 	Sprite* CheckForAnimationType(Sprite* animation);
 	Sprite* _currentSprite;
@@ -43,11 +55,12 @@ public:
 
 
 private:
-	Window _window;
-	Renderer _renderer;
+	StateManager* _stateManager;
 
 	Link _player;
-
 	Link _TestObject2;
+
+	unsigned int _lastTick;
+	float _delta;
 };
 
