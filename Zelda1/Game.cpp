@@ -17,19 +17,19 @@ int Global::_screenHeight = 720;
 		Link Global::_player{ { 100, 100, 100, 100 }, Global::playerSpeed,{ 50, 50, 50, 255 } };
 
 		Terrain Global::_startingLocation{ {0, 0, 1280, 720}, {0, 0, 0, 255} };
-		std::string Global::_startingLocationBmp{"../BMP/overworld_level_1.bmp" };
+		std::string Global::_startingLocationBmp{"../BMP/Levels/overworld_starting_location.bmp" };
 		Sprite* Global::_spriteStartingLocation;
 
 		Terrain Global::_upOne{ {0, 0, 1280, 720}, {0, 0, 0, 255} };
-		std::string Global::_upOneBmp{ "../BMP/overworld_up_one.bmp" };
+		std::string Global::_upOneBmp{ "../BMP/Levels/overworld_up_one.bmp" };
 		Sprite* Global::_spriteUpOne;
 
 		Terrain Global::_leftOne{ { 0, 0, 1280, 720 },{0, 0, 0, 255} };
-		std::string Global::_leftOneBmp{ "../BMP/overworld_left_one.bmp" };
+		std::string Global::_leftOneBmp{ "../BMP/Levels/overworld_left_one.bmp" };
 		Sprite* Global::_spriteLeftOne;
 
 		Terrain Global::_rightOne{ { 0, 0, 1280, 720 },{ 0, 0, 0, 255 } };
-		std::string Global::_rightOneBmp{ "../BMP/overworld_right_one.bmp" };
+		std::string Global::_rightOneBmp{ "../BMP/Levels/overworld_right_one.bmp" };
 		Sprite* Global::_spriteRightOne;
 
 Game::Game() :
@@ -37,11 +37,11 @@ Game::Game() :
 				_getInput{ nullptr },
 				_TestObject2{ {300, 300, 50, 50 }, Global::playerSpeed, { 50, 50, 50, 255 } }
 {
-	_playerIdleDown = Global::_renderer.CreateSprite("../BMP/link_idle_down.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
-	_playerIdleUp = Global::_renderer.CreateSprite("../BMP/link_idle_up.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
-	_playerIdleRight = Global::_renderer.CreateSprite("../BMP/link_idle_right.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
-	_playerIdleLeft = Global::_renderer.CreateSprite("../BMP/link_idle_left.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
-	_currentSprite = Global::_renderer.CreateSprite("../BMP/link_idle_down.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
+	_playerIdleDown = Global::_renderer.CreateSprite("../BMP/Player/link_idle_down.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
+	_playerIdleUp = Global::_renderer.CreateSprite("../BMP/Player/link_idle_up.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
+	_playerIdleRight = Global::_renderer.CreateSprite("../BMP/Player/link_idle_right.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
+	_playerIdleLeft = Global::_renderer.CreateSprite("../BMP/Player/link_idle_left.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
+	_currentSprite = Global::_renderer.CreateSprite("../BMP/Player/link_idle_down.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
 
 }
 
