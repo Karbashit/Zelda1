@@ -11,7 +11,8 @@ public:
 	SDL_Rect GetRect();
 	SDL_Color GetColor();
 
-
+	void Move(int x, int y);
+	void SetPosition(int x, int y);
 	void Render(Renderer& renderer);
 private:
 	SDL_Rect _rect;

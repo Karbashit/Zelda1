@@ -16,6 +16,18 @@ SDL_Color Terrain::GetColor()
 	return _color;
 }
 
+void Terrain::Move(int x, int y)
+{
+	_rect.x += x;
+	_rect.y += y;
+}
+
+void Terrain::SetPosition(int x, int y)
+{
+	_rect.x = x;
+	_rect.y = y;
+}
+
 void Terrain::Render(Renderer & renderer)
 {
 	renderer.DrawRect(GetRect(), GetColor());

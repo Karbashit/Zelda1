@@ -13,7 +13,6 @@ int Global::_screenHeight = 720;
 		Renderer Global::_renderer{ Global::_window };
 		StateManager* Global::_stateManager {new StateManager};
 
-
 		Link Global::_player{ { 100, 100, 100, 100 }, Global::playerSpeed,{ 50, 50, 50, 255 } };
 
 		Terrain Global::_startingLocation{ {0, 0, 1280, 720}, {0, 0, 0, 255} };
