@@ -1,16 +1,17 @@
 #include "Game.h"
 
-int Global::_screenWidth = 1280;
-int Global::_screenHeight = 720;
-
+		int Global::_screenWidth = 1280;
+		int Global::_screenHeight = 720;
 		bool Global::_gameIsRunning = true;
 		bool Global::up		= false;
 		bool Global::down	= false;
 		bool Global::left	= false;
 		bool Global::right	= false;
-		int Global::playerSpeed = 4;
+		int Global::playerSpeed = 1;
+
 		Window Global::_window{ "Zelda 1", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, Global::_screenWidth, Global::_screenHeight };
 		Renderer Global::_renderer{ Global::_window };
+
 		StateManager* Global::_stateManager {new StateManager};
 
 		Link Global::_player{ { 100, 100, 100, 100 }, Global::playerSpeed,{ 50, 50, 50, 255 } };
@@ -41,6 +42,14 @@ Game::Game() :
 	_playerIdleRight = Global::_renderer.CreateSprite("../BMP/Player/link_idle_right.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
 	_playerIdleLeft = Global::_renderer.CreateSprite("../BMP/Player/link_idle_left.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
 	_currentSprite = Global::_renderer.CreateSprite("../BMP/Player/link_idle_down.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
+	Global::_spriteLeftOne = Global::_renderer.CreateSprite(Global::_leftOneBmp, Global::_leftOne.GetRect().x, Global::_leftOne.GetRect().y,
+		Global::_leftOne.GetRect().w, Global::_leftOne.GetRect().h);
+	Global::_spriteStartingLocation = Global::_renderer.CreateSprite(Global::_startingLocationBmp, Global::_startingLocation.GetRect().x, Global::_startingLocation.GetRect().y,
+		Global::_startingLocation.GetRect().w, Global::_startingLocation.GetRect().h);
+	Global::_spriteUpOne = Global::_renderer.CreateSprite(Global::_upOneBmp, Global::_upOne.GetRect().x, Global::_upOne.GetRect().y,
+		Global::_upOne.GetRect().w, Global::_upOne.GetRect().h);
+	Global::_spriteRightOne = Global::_renderer.CreateSprite(Global::_rightOneBmp, Global::_rightOne.GetRect().x, Global::_rightOne.GetRect().y,
+		Global::_rightOne.GetRect().w, Global::_rightOne.GetRect().h);
 
 }
 

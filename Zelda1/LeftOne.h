@@ -11,6 +11,7 @@ class LeftOne : public IState
 {
 public:
 	void UpdatePlayerArea();
+	void TransitionScreen(int direction);
 	void Enter();
 	void Update(float p_delta);
 	void Exit();

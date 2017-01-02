@@ -15,5 +15,6 @@ public:
 	void Update(float p_delta);
 	void Exit();
 	void Draw();
+	void TransitionScreen(int direction);
 };
 

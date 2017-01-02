@@ -17,13 +17,19 @@ SDL_Color Link::GetColor()
 	return _color;
 }
 
-void Link::Move(int x, int y)
+void Link::Move(float x, float y)
 {
 	_rect.x += x;
 	_rect.y += y;
 }
 
 void Link::GetPos(int x, int y)
+{
+	_rect.x = x;
+	_rect.y = y;
+}
+
+void Link::SetPos(int x, int y)
 {
 	_rect.x = x;
 	_rect.y = y;

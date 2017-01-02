@@ -49,3 +49,8 @@ void StateManager::SetState(const std::string p_name)
 		m_currentState->Enter();
 	}
 }
+
+IState * StateManager::GetState()
+{
+	return m_currentState;
+}

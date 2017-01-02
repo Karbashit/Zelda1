@@ -13,6 +13,14 @@
 
 namespace Global
 {
+	enum Directions
+	{
+		leftDir = 1,
+		upDir = 2,
+		rightDir = 3,
+		downDir = 4
+	};
+
 	extern bool _gameIsRunning;
 
 	extern bool up;
