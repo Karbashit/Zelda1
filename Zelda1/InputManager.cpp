@@ -44,10 +44,14 @@ void InputManager::OnKeyEvent(const SDL_Keycode & key, bool isDown)
 	case SDLK_a:
 		Global::left = isDown;
 		break;
+	case SDLK_SPACE:
+		if (Global::swordAquired == 1)
+		{
+			Global::space = isDown;
+		}
 	default:
 		break;
 	}
-
 }
 
 

@@ -31,18 +31,6 @@
     <Filter Include="Source Files\Sprite">
       <UniqueIdentifier>{d78893e7-f7fb-4940-940f-40bfc6a8cd33}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Player, Terrain &amp; Creatures + Properties">
-      <UniqueIdentifier>{5b90f2b3-315c-4e55-8999-a545b8ff8095}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Player, Terrain &amp; Creatures + Properties\Player">
-      <UniqueIdentifier>{e7f260c0-a1fd-4f2a-afb8-a34d1a5cf1f6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Player, Terrain &amp; Creatures + Properties\Creatures">
-      <UniqueIdentifier>{2d5a4376-1d5f-41d6-b590-3ac9e93b12b1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Player, Terrain &amp; Creatures + Properties\Terrain">
-      <UniqueIdentifier>{7e36fad9-71ac-4bac-9160-390a6c2f9208}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Display">
       <UniqueIdentifier>{cef81a13-554a-4ea8-bcd5-06fa0f30d87f}</UniqueIdentifier>
     </Filter>
@@ -51,6 +39,24 @@
     </Filter>
     <Filter Include="Source Files\Display\Renderer">
       <UniqueIdentifier>{f1f7e7f5-8a8e-48c0-8440-c673d5adf762}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Player, Terrain , Npcs &amp; Items + Properties">
+      <UniqueIdentifier>{5b90f2b3-315c-4e55-8999-a545b8ff8095}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Player, Terrain , Npcs &amp; Items + Properties\Player">
+      <UniqueIdentifier>{e7f260c0-a1fd-4f2a-afb8-a34d1a5cf1f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Player, Terrain , Npcs &amp; Items + Properties\Npcs">
+      <UniqueIdentifier>{2d5a4376-1d5f-41d6-b590-3ac9e93b12b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Player, Terrain , Npcs &amp; Items + Properties\Terrain">
+      <UniqueIdentifier>{7e36fad9-71ac-4bac-9160-390a6c2f9208}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Player, Terrain , Npcs &amp; Items + Properties\Colliders">
+      <UniqueIdentifier>{e3a3dd61-ef76-4fe1-9da9-7e99ad5a4008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Player, Terrain , Npcs &amp; Items + Properties\Items">
+      <UniqueIdentifier>{a01782f2-cd59-40ce-b52d-823c406ab869}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -64,7 +70,7 @@
       <Filter>Source Files\World\Overworld</Filter>
     </ClCompile>
     <ClCompile Include="Link.cpp">
-      <Filter>Source Files\Player, Terrain &amp; Creatures + Properties\Player</Filter>
+      <Filter>Source Files\Player, Terrain , Npcs &amp; Items + Properties\Player</Filter>
     </ClCompile>
     <ClCompile Include="StateManager.cpp">
       <Filter>Source Files\StateManager</Filter>
@@ -88,7 +94,7 @@
       <Filter>Resource Files</Filter>
     </ClCompile>
     <ClCompile Include="Terrain.cpp">
-      <Filter>Source Files\Player, Terrain &amp; Creatures + Properties\Terrain</Filter>
+      <Filter>Source Files\Player, Terrain , Npcs &amp; Items + Properties\Terrain</Filter>
     </ClCompile>
     <ClCompile Include="UpOne.cpp">
       <Filter>Source Files\World\Overworld</Filter>
@@ -98,6 +104,18 @@
     </ClCompile>
     <ClCompile Include="RightOne.cpp">
       <Filter>Source Files\World\Overworld</Filter>
+    </ClCompile>
+    <ClCompile Include="FirstSwordDungeon.cpp">
+      <Filter>Source Files\World\Dungeons</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxCollider.cpp">
+      <Filter>Source Files\Player, Terrain , Npcs &amp; Items + Properties\Colliders</Filter>
+    </ClCompile>
+    <ClCompile Include="Npc.cpp">
+      <Filter>Source Files\Player, Terrain , Npcs &amp; Items + Properties\Npcs</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Source Files\Player, Terrain , Npcs &amp; Items + Properties\Items</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -111,7 +129,7 @@
       <Filter>Source Files\StateManager</Filter>
     </ClInclude>
     <ClInclude Include="Link.h">
-      <Filter>Source Files\Player, Terrain &amp; Creatures + Properties\Player</Filter>
+      <Filter>Source Files\Player, Terrain , Npcs &amp; Items + Properties\Player</Filter>
     </ClInclude>
     <ClInclude Include="InputManager.h">
       <Filter>Source Files\InputManager</Filter>
@@ -129,7 +147,7 @@
       <Filter>Source Files\StateManager</Filter>
     </ClInclude>
     <ClInclude Include="Terrain.h">
-      <Filter>Source Files\Player, Terrain &amp; Creatures + Properties\Terrain</Filter>
+      <Filter>Source Files\Player, Terrain , Npcs &amp; Items + Properties\Terrain</Filter>
     </ClInclude>
     <ClInclude Include="OverworldStartLocation.h">
       <Filter>Source Files\World\Overworld</Filter>
@@ -145,6 +163,18 @@
     </ClInclude>
     <ClInclude Include="RightOne.h">
       <Filter>Source Files\World\Overworld</Filter>
+    </ClInclude>
+    <ClInclude Include="FirstSwordDungeon.h">
+      <Filter>Source Files\World\Dungeons</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxCollider.h">
+      <Filter>Source Files\Player, Terrain , Npcs &amp; Items + Properties\Colliders</Filter>
+    </ClInclude>
+    <ClInclude Include="Npc.h">
+      <Filter>Source Files\Player, Terrain , Npcs &amp; Items + Properties\Npcs</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Source Files\Player, Terrain , Npcs &amp; Items + Properties\Items</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

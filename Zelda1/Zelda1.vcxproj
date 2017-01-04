@@ -151,11 +151,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BoxCollider.cpp" />
+    <ClCompile Include="FirstSwordDungeon.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="IState.cpp" />
+    <ClCompile Include="Item.cpp" />
     <ClCompile Include="LeftOne.cpp" />
     <ClCompile Include="Link.cpp" />
+    <ClCompile Include="Npc.cpp" />
     <ClCompile Include="OverworldStartLocation.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="RightOne.cpp" />
@@ -168,11 +172,15 @@
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BoxCollider.h" />
+    <ClInclude Include="FirstSwordDungeon.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="IState.h" />
+    <ClInclude Include="Item.h" />
     <ClInclude Include="LeftOne.h" />
     <ClInclude Include="Link.h" />
+    <ClInclude Include="Npc.h" />
     <ClInclude Include="OverworldStartLocation.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="RightOne.h" />

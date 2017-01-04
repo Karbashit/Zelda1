@@ -5,11 +5,15 @@
 #include "Link.h"
 #include "StateManager.h"
 #include "Terrain.h"
+#include "BoxCollider.h"
+#include "Npc.h"
+#include "Item.h"
 
 #include "OverworldStartLocation.h"
 #include "UpOne.h"
 #include "LeftOne.h"
 #include "RightOne.h"
+#include "FirstSwordDungeon.h"
 
 namespace Global
 {
@@ -27,12 +31,22 @@ namespace Global
 	extern bool down;
 	extern bool left;
 	extern bool right;
+	extern bool space;
+
+	extern bool playerFacingUp;
+	extern bool playerFacingDown;
+	extern bool playerFacingLeft;
+	extern bool playerFacingRight;
+
+	extern int swordAquired;
 
 	extern int playerSpeed;
 	extern int _screenWidth;
 	extern int _screenHeight;
 
 	extern Link _player;
+
+	extern BoxCollider _firstSwordDungEntrance;
 
 	extern 	Window _window;
 	extern Renderer _renderer;
@@ -54,6 +68,17 @@ namespace Global
 	extern std::string _rightOneBmp;
 	extern Sprite* _spriteRightOne;
 
+	extern Terrain _firstSwordDung;
+	extern std::string _firstSwordDungBmp;
+	extern Sprite* _spriteFirstSwordDung;
+
+	extern Npc _oldMan;
+	extern std::string _oldManBmp;
+	extern Sprite* _spriteOldMan;
+
+	extern Item _masterSword;
+	extern std::string _masterSwordBmp;
+	extern Sprite* _spriteMasterSword;
 }
 
 class StateManager;
@@ -68,8 +93,6 @@ public:
 	void Run();
 	void Update();
 	void UpdatePlayerPosition();
-	bool CollisionCheck(int parentx, int parenty, int parentsize, int childx, int childy, int childsize);
-	void CheckForCollisions();
 	void CalculateDeltatime();
 
 	Sprite* CheckForAnimationType(Sprite* animation);
@@ -82,11 +105,13 @@ public:
 	Sprite* _playerIdleUp;
 	Sprite* _playerIdleLeft;
 	Sprite* _playerIdleRight;
+	Sprite* _playerAttackDown;
+	Sprite* _playerAttackUp;
+	Sprite* _playerAttackLeft;
+	Sprite* _playerAttackRight;
 
 
 private:
-	Link _TestObject2;
-
 	unsigned int _lastTick;
 	float _delta;
 

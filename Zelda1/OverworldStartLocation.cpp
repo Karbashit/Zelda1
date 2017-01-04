@@ -55,6 +55,11 @@ void OverworldStartLocation::UpdatePlayerArea()
 	{
 		TransitionScreen(Global::Directions::rightDir);
 	}
+	if(CollisionCheck(Global::_player.GetRect().x, Global::_player.GetRect().y, 100, Global::_firstSwordDungEntrance.GetRect().x, Global::_firstSwordDungEntrance.GetRect().y, 50))
+	{
+		Global::_stateManager->SetState("FirstSwordDungeon");
+		Global::_player.GetPos(600, 570);
+	}
 }
 
 void OverworldStartLocation::TransitionScreen(int direction)
@@ -107,5 +112,20 @@ void OverworldStartLocation::TransitionScreen(int direction)
 		break;
 	default:
 		break;
+	}
+}
+
+bool OverworldStartLocation::CollisionCheck(int parentx, int parenty, int parentsize, int childx, int childy, int childsize)
+{
+	if (parentx - parentsize / 2 < childx + childsize / 2 &&
+		parentx + parentsize / 2 > childx - childsize / 2 &&
+		parenty - parentsize / 2 < childy + childsize / 2 &&
+		parenty + parentsize / 2 > childy - childsize / 2)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
 	}
 }
