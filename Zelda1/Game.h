@@ -79,6 +79,21 @@ namespace Global
 	extern Item _masterSword;
 	extern std::string _masterSwordBmp;
 	extern Sprite* _spriteMasterSword;
+
+	extern Sprite* _playerIdleDown;
+	extern Sprite* _playerIdleUp;
+	extern Sprite* _playerIdleLeft;
+	extern Sprite* _playerIdleRight;
+	extern Sprite* _playerAttackDown;
+	extern Sprite* _playerAttackUp;
+	extern Sprite* _playerAttackLeft;
+	extern Sprite* _playerAttackRight;
+	extern Sprite* _currentSprite;
+
+	extern void AnimUp();
+	extern void AnimDown();
+	extern void AnimLeft();
+	extern void AnimRight();
 }
 
 class StateManager;
@@ -94,27 +109,25 @@ public:
 	void Update();
 	void UpdatePlayerPosition();
 	void CalculateDeltatime();
+	static Uint32 attackUpAnimationReset(Uint32 interval, void* param);
+	static Uint32 attackDownAnimationReset(Uint32 interval, void* param);
+	static Uint32 attackLeftAnimationReset(Uint32 interval, void* param);
+	static Uint32 attackRightAnimationReset(Uint32 interval, void* param);
 
 	Sprite* CheckForAnimationType(Sprite* animation);
-	Sprite* _currentSprite;
 
 	InputManager* _getInput;
 	InputManager* _inputManager;
-
-	Sprite* _playerIdleDown;
-	Sprite* _playerIdleUp;
-	Sprite* _playerIdleLeft;
-	Sprite* _playerIdleRight;
-	Sprite* _playerAttackDown;
-	Sprite* _playerAttackUp;
-	Sprite* _playerAttackLeft;
-	Sprite* _playerAttackRight;
 
 
 private:
 	unsigned int _lastTick;
 	float _delta;
-
+	SDL_TimerID upReset;
+	SDL_TimerID downReset;
+	SDL_TimerID leftReset;
+	SDL_TimerID rightReset;
+	const int _delay = 1000;
 	int _screenWidth = 1280;
 	int _screenHeight = 720;
 };

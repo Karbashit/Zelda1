@@ -1,5 +1,4 @@
 #include "Game.h"
-
 		int Global::_screenWidth = 1280;
 		int Global::_screenHeight = 720;
 
@@ -56,20 +55,26 @@
 		std::string Global::_masterSwordBmp{ "../BMP/Items/mastersword.bmp" };
 		Sprite* Global::_spriteMasterSword;
 
+		Sprite* Global::_playerIdleDown = Global::_renderer.CreateSprite("../BMP/Player/link_idle_down.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
+		Sprite* Global::_playerIdleUp = Global::_renderer.CreateSprite("../BMP/Player/link_idle_up.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
+		Sprite* Global::_playerIdleRight = Global::_renderer.CreateSprite("../BMP/Player/link_idle_right.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
+		Sprite* Global::_playerIdleLeft = Global::_renderer.CreateSprite("../BMP/Player/link_idle_left.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
+		Sprite* Global::_playerAttackDown = Global::_renderer.CreateSprite("../BMP/Player/link_attack_down.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
+		Sprite* Global::_playerAttackUp = Global::_renderer.CreateSprite("../BMP/Player/link_attack_up.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
+		Sprite* Global::_playerAttackLeft = Global::_renderer.CreateSprite("../BMP/Player/link_attack_left.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
+		Sprite* Global::_playerAttackRight = Global::_renderer.CreateSprite("../BMP/Player/link_attack_right.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
+		Sprite* Global::_currentSprite = Global::_renderer.CreateSprite("../BMP/Player/link_idle_down.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
+
+		void Global::AnimUp(){Global::_currentSprite = Global::_playerIdleUp;}
+		void Global::AnimDown() { Global::_currentSprite = Global::_playerIdleDown;}
+		void Global::AnimLeft() { Global::_currentSprite = Global::_playerIdleLeft;}
+		void Global::AnimRight() { Global::_currentSprite = Global::_playerIdleRight;}
+
 Game::Game() :
-				_inputManager{new InputManager},
-				_getInput{ nullptr }
+	_inputManager{new InputManager},
+	_getInput{ nullptr }
 {
 	//Player Texture Initialization
-	_playerIdleDown = Global::_renderer.CreateSprite("../BMP/Player/link_idle_down.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
-	_playerIdleUp = Global::_renderer.CreateSprite("../BMP/Player/link_idle_up.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
-	_playerIdleRight = Global::_renderer.CreateSprite("../BMP/Player/link_idle_right.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
-	_playerIdleLeft = Global::_renderer.CreateSprite("../BMP/Player/link_idle_left.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
-	_playerAttackDown = Global::_renderer.CreateSprite("../BMP/Player/link_attack_down.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
-	_playerAttackUp = Global::_renderer.CreateSprite("../BMP/Player/link_attack_up.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
-	_playerAttackLeft = Global::_renderer.CreateSprite("../BMP/Player/link_attack_left.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
-	_playerAttackRight = Global::_renderer.CreateSprite("../BMP/Player/link_attack_right.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
-	_currentSprite = Global::_renderer.CreateSprite("../BMP/Player/link_idle_down.bmp", 0, 0, Global::_player.GetRect().w, Global::_player.GetRect().h);
 
 	//Terrain Texture Initialization
 	Global::_spriteLeftOne = Global::_renderer.CreateSprite(Global::_leftOneBmp, Global::_leftOne.GetRect().x, Global::_leftOne.GetRect().y,
@@ -95,6 +100,11 @@ Game::Game() :
 
 void Game::Run()
 {
+	if (SDL_Init(SDL_INIT_TIMER) < 0)
+	{
+		printf("SDL Timer could not initialize! SDL Error: %s\n", SDL_GetError());
+	}
+
 	Global::_stateManager->AddState("StartingLocation", new OverworldStartLocation());
 	Global::_stateManager->SetState("StartingLocation");
 
@@ -112,8 +122,8 @@ void Game::Run()
 void Game::Update()
 {
 	UpdatePlayerPosition();
-
-	CheckForAnimationType(_currentSprite);
+	CalculateDeltatime();
+	CheckForAnimationType(Global::_currentSprite);
 
 	_getInput->KeyBoardInput();
 
@@ -122,7 +132,7 @@ void Game::Update()
 	Global::_stateManager->Update(_delta);
 	Global::_stateManager->Draw();
 
-	Global::_renderer.DrawSprite(Global::_player.GetRect().x, Global::_player.GetRect().y, _currentSprite);
+	Global::_renderer.DrawSprite(Global::_player.GetRect().x, Global::_player.GetRect().y, Global::_currentSprite);
 	Global::_player.Render(Global::_renderer);
 
 	Global::_renderer.Present();
@@ -150,28 +160,56 @@ void Game::UpdatePlayerPosition()
 	{
 		if (Global::playerFacingUp == true)
 		{
-			_currentSprite = _playerAttackUp;
+			Global::_currentSprite = Global::_playerAttackUp;
+			upReset = SDL_AddTimer(400, Game::attackUpAnimationReset, "Nothing");
 		}
 		if (Global::playerFacingDown == true)
 		{
-			_currentSprite = _playerAttackDown;
+			Global::_currentSprite = Global::_playerAttackDown;
+			downReset = SDL_AddTimer(400, Game::attackDownAnimationReset, "Nothing");
 		}
 		if (Global::playerFacingLeft == true)
 		{
-			_currentSprite = _playerAttackLeft;
+			Global::_currentSprite = Global::_playerAttackLeft;
+			leftReset = SDL_AddTimer(400, Game::attackLeftAnimationReset, "Nothing");
 		}
 		if (Global::playerFacingRight == true)
 		{
-			_currentSprite = _playerAttackRight;
+			Global::_currentSprite = Global::_playerAttackRight;
+			rightReset = SDL_AddTimer(400, Game::attackRightAnimationReset, "Nothing");
 		}
 	}
+}
+
+Uint32 Game::attackUpAnimationReset(Uint32 interval, void* param)
+{
+	Global::AnimUp();
+	return(0);
+}
+
+Uint32 Game::attackDownAnimationReset(Uint32 interval, void * param)
+{
+	Global::AnimDown();
+	return(0);
+}
+
+Uint32 Game::attackLeftAnimationReset(Uint32 interval, void * param)
+{
+	Global::AnimLeft();
+	return(0);
+}
+
+Uint32 Game::attackRightAnimationReset(Uint32 interval, void * param)
+{
+	Global::AnimRight();
+	return(0);
 }
 
 Sprite* Game::CheckForAnimationType(Sprite* animation)
 {
 	if (Global::up)
 	{
-		_currentSprite = _playerIdleUp;
+		Global::_currentSprite = Global::_playerIdleUp;
 		Global::playerFacingUp =	true; 
 		Global::playerFacingDown =	false; 
 		Global::playerFacingLeft =	false; 
@@ -180,7 +218,7 @@ Sprite* Game::CheckForAnimationType(Sprite* animation)
 			
 	if (Global::down)
 	{
-		_currentSprite = _playerIdleDown;
+		Global::_currentSprite = Global::_playerIdleDown;
 		Global::playerFacingUp =	false; 
 		Global::playerFacingDown =	true; 
 		Global::playerFacingLeft =	false; 
@@ -189,7 +227,7 @@ Sprite* Game::CheckForAnimationType(Sprite* animation)
 
 	if (Global::left)
 	{
-		_currentSprite = _playerIdleLeft;
+		Global::_currentSprite = Global::_playerIdleLeft;
 		Global::playerFacingUp =	false; 
 		Global::playerFacingDown =	false; 
 		Global::playerFacingLeft =	true; 
@@ -198,7 +236,7 @@ Sprite* Game::CheckForAnimationType(Sprite* animation)
 
 	if (Global::right)
 	{
-		_currentSprite = _playerIdleRight;
+		Global::_currentSprite = Global::_playerIdleRight;
 		Global::playerFacingUp =	false; 
 		Global::playerFacingDown =	false; 
 		Global::playerFacingLeft =	false; 
@@ -207,10 +245,12 @@ Sprite* Game::CheckForAnimationType(Sprite* animation)
 		return animation;
 }
 
+
+
 void Game::CalculateDeltatime()
 {
-	_delta = 0.001f * (SDL_GetTicks() - _lastTick);
 	_lastTick = SDL_GetTicks();
+	_delta = SDL_GetTicks() - _lastTick;
 }
 
 Game::~Game()
