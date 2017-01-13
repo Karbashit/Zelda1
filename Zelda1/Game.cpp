@@ -16,14 +16,15 @@
 
 		int Global::swordAquired = 0;
 
+
 		int Global::playerSpeed = 1;
 
-		Window Global::_window{ "Zelda 1 Clone (Alpha)", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, Global::_screenWidth, Global::_screenHeight };
+		Window Global::_window{ "Zelda 1 Clone (Shitty Alpha)", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, Global::_screenWidth, Global::_screenHeight };
 		Renderer Global::_renderer{ Global::_window };
 
 		StateManager* Global::_stateManager {new StateManager};
 
-		Link Global::_player{ { 100, 100, 100, 100 }, Global::playerSpeed,{ 50, 50, 50, 255 } };
+		Link Global::_player{ { 500, 300, 100, 100 }, Global::playerSpeed,{ 50, 50, 50, 255 } };
 
 		BoxCollider Global::_firstSwordDungEntrance{ {300, 50, 50, 50}, {50, 50, 50, 255} };
 
@@ -74,6 +75,10 @@ Game::Game() :
 	_inputManager{new InputManager},
 	_getInput{ nullptr }
 {
+	assert(Mix_Init(MIX_INIT_OGG) != 0 && "Mix_Init Failed");
+	assert(Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024) != -1 && "Mix_OpenAudio Failed");
+	overworld = Mix_LoadWAV("../Music/Overworld.ogg");
+	Mix_PlayChannel(-1, overworld, 0);
 	//Player Texture Initialization
 
 	//Terrain Texture Initialization
@@ -131,6 +136,7 @@ void Game::Update()
 	Global::_renderer.DrawSprite(Global::_player.GetRect().x, Global::_player.GetRect().y, Global::_currentSprite);
 	Global::_player.Render(Global::_renderer);
 	Global::_renderer.Present();
+	SDL_Delay(1);
 }
 
 void Game::UpdatePlayerPosition()

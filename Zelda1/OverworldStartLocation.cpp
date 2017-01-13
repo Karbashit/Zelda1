@@ -12,6 +12,7 @@ void OverworldStartLocation::Enter()
 	Global::_upOne.SetPosition(0, -720);
 	Global::_leftOne.SetPosition(-1280, 0);
 	Global::_rightOne.SetPosition(1280, 0);
+
 }
 
 void OverworldStartLocation::Update(float p_delta)

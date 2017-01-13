@@ -1,4 +1,5 @@
 #pragma once
+#include "SDL_mixer.h"
 #include "Window.h"
 #include "Renderer.h"
 #include "InputManager.h"
@@ -104,7 +105,6 @@ class Game
 public:
 	Game();
 	~Game();
-
 	void Run();
 	void Update();
 	void UpdatePlayerPosition();
@@ -121,6 +121,7 @@ public:
 
 
 private:
+	Mix_Chunk* overworld = nullptr;
 
 	unsigned int _lastTick;
 	float _delta;
