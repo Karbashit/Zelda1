@@ -121,12 +121,15 @@ public:
 
 
 private:
+
 	unsigned int _lastTick;
 	float _delta;
+
 	SDL_TimerID upReset;
 	SDL_TimerID downReset;
 	SDL_TimerID leftReset;
 	SDL_TimerID rightReset;
+
 	const int _delay = 1000;
 	int _screenWidth = 1280;
 	int _screenHeight = 720;

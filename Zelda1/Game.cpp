@@ -124,17 +124,12 @@ void Game::Update()
 	UpdatePlayerPosition();
 	CalculateDeltatime();
 	CheckForAnimationType(Global::_currentSprite);
-
 	_getInput->KeyBoardInput();
-
 	Global::_renderer.Update();
-
 	Global::_stateManager->Update(_delta);
 	Global::_stateManager->Draw();
-
 	Global::_renderer.DrawSprite(Global::_player.GetRect().x, Global::_player.GetRect().y, Global::_currentSprite);
 	Global::_player.Render(Global::_renderer);
-
 	Global::_renderer.Present();
 }
 
@@ -255,4 +250,8 @@ void Game::CalculateDeltatime()
 
 Game::~Game()
 {
+	SDL_RemoveTimer(upReset);
+	SDL_RemoveTimer(downReset);
+	SDL_RemoveTimer(leftReset);
+	SDL_RemoveTimer(rightReset);
 }
