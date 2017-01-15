@@ -58,6 +58,15 @@
     <Filter Include="Source Files\Player, Terrain , Npcs &amp; Items + Properties\Items">
       <UniqueIdentifier>{a01782f2-cd59-40ce-b52d-823c406ab869}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\SoundManager">
+      <UniqueIdentifier>{c799b306-1b6b-4e54-8ad2-140c0e0d9a23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CollisionManager">
+      <UniqueIdentifier>{aea4b71e-2c7a-41a5-8ab7-5c95c70d12a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Components">
+      <UniqueIdentifier>{9d10376c-3a7c-4775-b1cb-f80923dd83ad}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp">
@@ -117,6 +126,18 @@
     <ClCompile Include="Item.cpp">
       <Filter>Source Files\Player, Terrain , Npcs &amp; Items + Properties\Items</Filter>
     </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>Source Files\SoundManager</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionManager.cpp">
+      <Filter>Source Files\CollisionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>Source Files\CollisionManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ICollidable.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SDLSystem.h">
@@ -175,6 +196,18 @@
     </ClInclude>
     <ClInclude Include="Item.h">
       <Filter>Source Files\Player, Terrain , Npcs &amp; Items + Properties\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.h">
+      <Filter>Source Files\SoundManager</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionManager.h">
+      <Filter>Source Files\CollisionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>Source Files\CollisionManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ICollidable.h">
+      <Filter>Source Files\Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

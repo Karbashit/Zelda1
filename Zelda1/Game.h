@@ -9,6 +9,8 @@
 #include "BoxCollider.h"
 #include "Npc.h"
 #include "Item.h"
+#include "SoundManager.h"
+
 
 #include "OverworldStartLocation.h"
 #include "UpOne.h"
@@ -99,6 +101,7 @@ namespace Global
 
 class StateManager;
 class InputManager;
+class SoundManager;
 
 class Game
 {
@@ -118,6 +121,7 @@ public:
 
 	InputManager* _getInput;
 	InputManager* _inputManager;
+	SoundManager* _soundManager;
 
 
 private:

@@ -6,7 +6,6 @@ int main(int argc, char* argv[])
 {
 	try
 	{
-		SDL_Init(SDL_INIT_TIMER);
 		Game game;
 		game.Run();
 	}

@@ -75,13 +75,12 @@ Game::Game() :
 	_inputManager{new InputManager},
 	_getInput{ nullptr }
 {
+	SDL_Init(SDL_INIT_TIMER);
 	assert(Mix_Init(MIX_INIT_OGG) != 0 && "Mix_Init Failed");
 	assert(Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024) != -1 && "Mix_OpenAudio Failed");
 	overworld = Mix_LoadWAV("../Music/Overworld.ogg");
 	Mix_PlayChannel(-1, overworld, 0);
-	//Player Texture Initialization
 
-	//Terrain Texture Initialization
 	Global::_spriteLeftOne = Global::_renderer.CreateSprite(Global::_leftOneBmp, Global::_leftOne.GetRect().x, Global::_leftOne.GetRect().y,
 		Global::_leftOne.GetRect().w, Global::_leftOne.GetRect().h);
 	Global::_spriteStartingLocation = Global::_renderer.CreateSprite(Global::_startingLocationBmp, Global::_startingLocation.GetRect().x, Global::_startingLocation.GetRect().y,
@@ -93,10 +92,8 @@ Game::Game() :
 	Global::_spriteFirstSwordDung = Global::_renderer.CreateSprite(Global::_firstSwordDungBmp, Global::_firstSwordDung.GetRect().x, Global::_firstSwordDung.GetRect().y,
 		Global::_firstSwordDung.GetRect().w, Global::_firstSwordDung.GetRect().h);
 
-	//Npcs Texture Initialization
 	Global::_spriteOldMan = Global::_renderer.CreateSprite(Global::_oldManBmp, Global::_oldMan.GetRect().x, Global::_oldMan.GetRect().y,
 		Global::_oldMan.GetRect().w, Global::_oldMan.GetRect().h);
-	//Items Texture Initialization
 
 	Global::_spriteMasterSword = Global::_renderer.CreateSprite(Global::_masterSwordBmp, Global::_masterSword.GetRect().x, Global::_masterSword.GetRect().y,
 		Global::_masterSword.GetRect().w, Global::_masterSword.GetRect().h);
@@ -126,6 +123,7 @@ void Game::Run()
 
 void Game::Update()
 {
+	_soundManager->Update();
 	UpdatePlayerPosition();
 	CalculateDeltatime();
 	CheckForAnimationType(Global::_currentSprite);
